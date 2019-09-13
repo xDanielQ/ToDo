@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDo</title>
+    </head>
+        <div><b>Dodaj nowe zadanie</b> </div>
+        <form action="/todo" method="post">
+            <table>
+                <tr>
+                    <td>Tytuł:
+                        <input type="text" name="title"
+                               th:field="${todo.title}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status zadania:
+                        <input type="text" name="status"
+                               th:field="${todo.status}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data utworzenia:
+                        <input type="date" name="createDate"
+                               th:field="${todo.createDate}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data zakończenia:
+                        <input type="date" name="endDate"
+                               th:field="${todo.endDate}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Treść:
+                        <input type="text" name="task"
+                               th:field="${todo.task}" style="height: 100px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Rejestruj"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

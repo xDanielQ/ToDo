@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Todo</title>
+    </head>
+    <body>
+        <div> <b>Zadanie</b></div>
+        <table style="border: solid 1px black">
+            <tr>
+                <th>Tytuł:</th>
+                <th>Status</th>
+                <th>Data utworzenia:</th>
+                <th>Data zakończenia:</th>
+                <th>Treść:</th>
+            </tr>
+
+            <tr>
+                <td th:text="${todo.title}"> Brak</td>
+                <td th:text="${todo.status}"> Brak</td>
+                <td th:text="${todo.createDate}"> dd.mm.yyyy</td>
+                <td th:text="${todo.endDate}">dd.mm.yyyy</td>
+                <td th:text="${todo.task}">Brak</td>
+            </tr>
+        </table>
+        <a href="#" th:href="${'/todo/list'}">Lista</a>
+    </body>
+</html>

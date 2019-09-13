@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www/thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>My First To-Do app</title>
+
+    </head>
+    <body>
+    <div style="text-align:center">
+        <h1>
+            Welcome!
+        </h1>
+        <h3>
+            On this site You can create own todo list.<br><br><br>
+            <a href="#" th:href="${'/todo/add'}" style="color:red"> <b><< Let's start! >></b></a>
+            <br>
+            <img src="https://i.pinimg.com/originals/39/e0/d4/39e0d43392e3410de40a34307559d8d7.jpg" alt="Start creating!">
+        </h3>
+    </div>
+    </body>
+</html>
